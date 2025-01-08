@@ -12,14 +12,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var list: [TooltipModel] = [
+        TooltipModel(title: "Hello")
+    ]
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        VStack(spacing: 50) {
+            HStack(spacing: 24) {
+                Tooltip(items: list, type: .bottom)
+                Tooltip(items: list, type: .top)
+                Tooltip(items: list, type: .left)
+                Tooltip(items: list, type: .right)
+            }
         }
-        .padding()
     }
 }
 
