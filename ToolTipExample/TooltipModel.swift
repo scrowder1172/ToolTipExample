@@ -9,3 +9,9 @@
 
 
 import Foundation
+
+struct TooltipModel {
+    let id = UUID().uuidString
+    var icon: String? = nil
+    let title: String
+}
